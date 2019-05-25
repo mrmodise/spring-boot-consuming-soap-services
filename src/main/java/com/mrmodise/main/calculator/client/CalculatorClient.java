@@ -37,4 +37,19 @@ public class CalculatorClient extends WebServiceGatewaySupport {
 
         return subtractResponseJAXBElement.getValue();
     }
+
+    @SuppressWarnings("unchecked")
+    public DivideResponse divide(int intA, int intB) {
+        JAXBElement<DivideResponse> divideResponseJAXBElement;
+
+        Divide divide = new Divide();
+        divide.setIntA(intA);
+        divide.setIntB(intB);
+
+        divideResponseJAXBElement = (JAXBElement<DivideResponse>)getWebServiceTemplate()
+                .marshalSendAndReceive(new ObjectFactory()
+                        .createDivide(divide));
+
+        return divideResponseJAXBElement.getValue();
+    }
 }
