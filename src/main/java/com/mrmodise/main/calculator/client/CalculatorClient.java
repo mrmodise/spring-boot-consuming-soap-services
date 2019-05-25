@@ -7,6 +7,7 @@ import javax.xml.bind.JAXBElement;
 
 public class CalculatorClient extends WebServiceGatewaySupport {
 
+    @SuppressWarnings("unchecked")
     public AddResponse add(int intA, int intB) {
 
         JAXBElement<AddResponse> addResponseJAXBElement;
@@ -22,6 +23,7 @@ public class CalculatorClient extends WebServiceGatewaySupport {
         return addResponseJAXBElement.getValue();
     }
 
+    @SuppressWarnings("unchecked")
     public SubtractResponse subtract(int intA, int intB) {
         JAXBElement<SubtractResponse> subtractResponseJAXBElement;
 
