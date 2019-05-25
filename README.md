@@ -24,7 +24,7 @@ To execute the application:
 $ java -jar target/spring-consuming-soap-services-0.0.1-SNAPSHOT.jar 12 34
 ``
 
-The last 2 numbers 12 and 34 are the parameters to be passed to the application for addition, subtraction, division and multiplication.
+The last 2 numbers 12 and 34 are the parameters to be passed to the application for addition, subtraction, division and multiplication. These are changeable
 
 ## License
 ```
