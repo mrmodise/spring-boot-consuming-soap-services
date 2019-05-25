@@ -2,12 +2,12 @@
 This demo project illustrates how you can consume SOAP Web services from within Spring Boot. Using [calculator-webservices](http://calculator-webservice.mybluemix.net/calculator)
 the application consumes 4 SOAP operations, namely; a) Add b) Subtract c) Divide and d) Multiply.
 
-## Perquisites
+## Prerequisites
 1. Internet connection
 2. Java 8
 3. IDE (IntelliJIDEA)
 
-## Building the application
+## Build
 To build the project files:
 
 ``
@@ -17,7 +17,7 @@ mvn clean package
 This command will generate the application jar file located at: ``target/spring-consuming-soap-services-0.0.1-SNAPSHOT.jar``.
 
 
-## Running the application
+## Run
 To execute the application:
 
 ``
