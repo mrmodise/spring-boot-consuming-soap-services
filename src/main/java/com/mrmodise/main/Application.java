@@ -2,6 +2,7 @@ package com.mrmodise.main;
 
 import calculator.wsdl.AddResponse;
 import calculator.wsdl.DivideResponse;
+import calculator.wsdl.MultiplyResponse;
 import calculator.wsdl.SubtractResponse;
 import com.mrmodise.main.calculator.client.CalculatorClient;
 import org.springframework.boot.CommandLineRunner;
@@ -36,6 +37,9 @@ public class Application {
 
             DivideResponse divideResponse = calculatorClient.divide(intA, intB);
             System.err.println("Dividing " + intA + " & " + intB + " , result: " + divideResponse.getValue());
+
+            MultiplyResponse multiplyResponse = calculatorClient.multiply(intA, intB);
+            System.err.println("Multiplying " + intA + " & " + intB + " , result: " + multiplyResponse.getValue());
         };
     }
 }
