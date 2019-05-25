@@ -1,6 +1,7 @@
 package com.mrmodise.main;
 
 import calculator.wsdl.AddResponse;
+import calculator.wsdl.SubtractResponse;
 import com.mrmodise.main.calculator.client.CalculatorClient;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -28,6 +29,9 @@ public class Application {
 
             AddResponse addResponse = calculatorClient.add(intA, intB);
             System.err.println("Adding " + intA + " & " + intB + " , result: " + addResponse.getValue());
+
+            SubtractResponse subtractResponse = calculatorClient.subtract(intA, intB);
+            System.err.println("Subtracting " + intA + " & " + intB + " , result: " + subtractResponse.getValue());
         };
     }
 }
