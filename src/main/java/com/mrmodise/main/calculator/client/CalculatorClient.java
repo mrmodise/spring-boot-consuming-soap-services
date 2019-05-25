@@ -52,4 +52,19 @@ public class CalculatorClient extends WebServiceGatewaySupport {
 
         return divideResponseJAXBElement.getValue();
     }
+
+    @SuppressWarnings("unchecked")
+    public MultiplyResponse multiply(int intA, int intB) {
+        JAXBElement<MultiplyResponse> multiplyResponseJAXBElement;
+
+        Multiply multiply = new Multiply();
+        multiply.setIntA(intA);
+        multiply.setIntB(intB);
+
+        multiplyResponseJAXBElement = (JAXBElement<MultiplyResponse>)getWebServiceTemplate()
+                .marshalSendAndReceive(new ObjectFactory()
+                        .createMultiply(multiply));
+
+        return multiplyResponseJAXBElement.getValue();
+    }
 }
